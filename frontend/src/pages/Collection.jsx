@@ -1,5 +1,5 @@
-import React, { useContext, useState } from 'react'
-import { ShopContext } from '../context/ShopContext'
+import React, { useContext, useState } from 'react';
+import { ShopContext } from '../context/ShopContext';
 
 const Collection = () => {
 
