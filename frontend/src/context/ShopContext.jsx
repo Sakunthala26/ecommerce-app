@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { products } from "../assets/frontend_assets/assets";
 
 
@@ -25,14 +25,20 @@ import { products } from "../assets/frontend_assets/assets";
         }
         else{
             cartData[itemId] = {};
-            cartData[itemId][size] =1;
+            cartData[itemId][size] = 1;
         }
+        setCartItems(cartData);
 
     }
 
+    useEffect(()=>{
+        console.log(cartItems);
+    },[cartItems])
+
     const value = {
         products,currency,delivery_fee,
-        search,setSearch,showSearch,setShowSearch
+        search,setSearch,showSearch,setShowSearch,
+        cartItems,addToCart
     }
 
     return(
