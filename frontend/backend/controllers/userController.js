@@ -10,6 +10,19 @@ const createToken = (id) => {
 // Route  for user login 
 const loginUser = async (req,res) => {
 
+    try {
+
+        const {email,password} = req.body;
+        const user = await userModel.findOne({email});
+
+        if (!user) {
+            return res.json({success:false, message:"User doesn't exists"})
+        }
+        
+    } catch (error) {
+        
+    }
+
 }
 
 // Route for user register
@@ -19,7 +32,7 @@ const registerUser = async (req,res) => {
         const {name, email, password} = req.body;
 
         // checking user already exists or not
-        const exists = await userModel.findOne({email})
+        const exists = await userModel.findOne({email});
         if (exists) {
             return res.json({success:false, message:"User already exists"})
             
