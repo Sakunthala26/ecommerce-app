@@ -11,13 +11,10 @@ try {
     const image3 = req.files.image3 && req.files.image3[0]
     const image4 = req.files.image4 && req.files.image4[0]
 
-    console.log("FILES: ", req.files);
-
-
     const images = [image1,image2,image3,image4].filter((item)=> item !== undefined)
 
     let imageurl = await Promise.all(
-        images.map(async (item)=>{
+        images.map(async (item) => {
             let result = await cloudinary.uploader.upload(item.path)
 
         })
