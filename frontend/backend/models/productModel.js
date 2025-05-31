@@ -1,6 +1,4 @@
 import mongoose  from "mongoose";
-import BestSeller from './../../src/components/BestSeller';
-import Product from './../../src/pages/Product';
 
 const productSchema = new mongoose.Schema({
     name: { type: String, required: true },
