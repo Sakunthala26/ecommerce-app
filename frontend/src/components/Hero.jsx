@@ -21,7 +21,13 @@ const Hero = () => {
 
       </div>
       {/* Hero Right Side */}
-      <img className='w-full sm:w-1/2' src={assets.hero_img} alt="" />
+      <div className='w-full sm:w-1/2 flex justify-end items-center'>
+    <img 
+      className='max-h-[500px] object-contain' 
+      src={assets.hero_img} 
+      alt="" 
+    />
+  </div>
     </div>
   )
 }

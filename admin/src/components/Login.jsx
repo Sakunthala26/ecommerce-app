@@ -3,7 +3,7 @@ import axios from 'axios'
 import { backendUrl } from '../App'
 import { toast } from 'react-toastify'
 
-const Login = (setToken) => {
+const Login = ({ setToken }) =>  {
 
     const [email,setEmail] = useState('')
     const [password,setPassword] = useState('')
@@ -19,7 +19,8 @@ const Login = (setToken) => {
         }
 
     } catch (error) {
-        console.error("Login error:", error);
+        console.error(error);
+        toast.error(error.message);
        }
   }
 

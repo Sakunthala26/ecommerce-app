@@ -4,12 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
+
 a.active hr{
     display: block;
 }
 
 *{
-    font-family: outfit;
+    font-family: Outfit;
 }
 .prata-regular {
     font-family: "Prata", serif;
